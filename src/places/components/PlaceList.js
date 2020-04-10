@@ -10,7 +10,7 @@ export const PlaceList = props => {
     return (
       <div className="place-list center">
         <Card>
-          <h2>No Places Found Create one??</h2>
+          <h2>No Places Found Create oness?</h2>
           <Button to="/places/new">Share place</Button>
         </Card>
       </div>
@@ -23,12 +23,13 @@ export const PlaceList = props => {
           <PlaceItem
             key={place.id}
             id={place.id}
-            image={place.imageUrl}
+            image={place.image}
             title={place.title}
             description={place.desc}
             address={place.address}
             creatorId={place.creator}
             coordinated={place.location}
+            onDelete={props.onDeletePlace}
           />
         );
       })}

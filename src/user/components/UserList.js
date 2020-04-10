@@ -10,7 +10,7 @@ export const UserList = props => {
       </div>
     );
   }
-
+  console.log("props", props);
   return (
     <ul className="users-list">
       {props.items.map(user => {
@@ -20,7 +20,7 @@ export const UserList = props => {
             id={user.id}
             image={user.image}
             name={user.name}
-            placeCount={user.places}
+            placeCount={user.places.length}
           />
         );
       })}
